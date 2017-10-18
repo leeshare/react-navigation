@@ -180,6 +180,13 @@ export default (
             routeName: action.routeName,
           };
         }
+        //2017-10-18  lixl change
+        //if the 'route' in 'state.routes' by routeName, then didnot push it in
+        if(state.routes.length > 0){
+          if(state.routes[state.routes.length - 1].routeName == route.routeName){
+            return state;
+          }
+        }
         return StateUtils.push(state, route);
       }
 
