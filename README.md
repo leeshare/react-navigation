@@ -54,3 +54,16 @@ Facebook, Exponent and the React community at large.
 - [Routers](https://reactnavigation.org/docs/routers/)
 - [Views](https://reactnavigation.org/docs/views/)
 
+## 2017-10-18 fix bug
+
+Update StackRouter.js
+对于 StackNavigation 的导航功能，如果点击多次 则会执行多次 类似于 this.props.navigation.navigate('LectureList'); 
+会压入栈多个相同的页。
+修改位置是： StackRouter.js  No.182，插入  
+
+        if(state.routes.length > 0){
+          if(state.routes[state.routes.length - 1].routeName == route.routeName){
+            return state;
+          }
+        }
+ 这样就可以解决 多次压入同一个页的问题了
