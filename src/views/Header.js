@@ -320,11 +320,11 @@ const styles = StyleSheet.create({
   },
   title: {
     bottom: 0,
-    left: TITLE_OFFSET,
-    right: TITLE_OFFSET,
+    left: 0,
+    right: 0,
     top: 0,
     position: 'absolute',
-    alignItems: Platform.OS === 'ios' ? 'center' : 'flex-start',
+    alignItems: Platform.OS === 'ios' ? 'center' : 'center',
   },
   left: {
     left: 0,

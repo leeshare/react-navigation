@@ -89,7 +89,7 @@ const RESPOND_THRESHOLD = 12;
 /**
  * The distance of touch start from the edge of the screen where the gesture will be recognized
  */
-const GESTURE_RESPONSE_DISTANCE_HORIZONTAL = 35;
+const GESTURE_RESPONSE_DISTANCE_HORIZONTAL = 105;
 const GESTURE_RESPONSE_DISTANCE_VERTICAL = 135;
 
 const animatedSubscribeValue = (animatedValue: Animated.Value) => {
